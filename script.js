@@ -40,15 +40,15 @@ function doLine(line){
 };
  
 
- fs.readFile('isolux-images-add.csv', { encoding : 'utf8' },
-  (err, data) => {
-    if (err) fs.appendFileSync('err.txt', `\n${err}`); 
-    data.split('\n').forEach(line => {
-      doLine(line);
-    });
-  });
- 
- 
+fs.readFile('isolux-images-add.csv', { encoding : 'utf8' },
+	(err, data) => {
+		if (err) fs.appendFileSync('err.txt', `\n${err}`); 
+		data.split('\n').forEach(line => {
+			doLine(line);
+		});
+});
+
+
 
  
  
