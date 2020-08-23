@@ -3,11 +3,8 @@ var fs = require('fs');
 function getFileExtension(filename) {
     return filename.slice((filename.lastIndexOf(".") - 1 >>> 0) + 2);
 };
-
-
  
 function doLine(line){
-	 
 	var art=line.substring(0,line.indexOf(','));
 	var pattern = /(?=\w)([\w\/]+(?:\.png|\.jpg|\.jpeg|\.gif|\.xls|\.xlsx|\.rar|\.zip|\.doc|\.docx))|([\.\~\&\-\w\/]+(?:\.png|\.jpg|\.jpeg|\.gif|\.xls|\.xlsx|\.rar|\.zip|\.doc|\.docx))/gmi;
 	var result1 = [];
